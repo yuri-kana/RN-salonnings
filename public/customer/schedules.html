@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Schedule Dashboard</title>
+    <link rel="stylesheet" href="schedules.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <hr>
+                <li><a href="dashboard.html">DASHBOARD</a></li>
+                <hr>
+                <li><a href="appointment.html">APPOINTMENT</a></li>
+                <hr>
+                <li><a href="schedules.html" class="highlight">SCHEDULES</a></li>
+                <hr>
+                <li><a href="services.html">SERVICES</a></li>
+                <hr>
+                <li><a href="package.html">PACKAGE</a></li>
+                <hr>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <hr>
+                <li><a href="../index.html">LOG OUT</a></li>
+                <hr>
+            </ul>
+        </nav>
+        <div class="content">
+            <div class="appointment-list">
+                <table id="appointmentTable">
+                    <thead>
+                        <tr>
+                            <th>Customer Name</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Services</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="appointmentList"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="schedules.js"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eae7e2;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #d1c1a7;
+}
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background-color: #c49a6c;
+    padding: 20px;
+    overflow-y: hidden;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #8d6e4e;
+}
+
+.sidebar hr {
+    border: 1px solid black;
+    margin: 10px 0;
+}
+
+.highlight {
+    background-color: #8d6e4e;
+}
+
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.add-btn {
+    background-color: #c49a6c;
+    border: none;
+    padding: 10px 20px;
+    color: black;
+    font-weight: bold;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.add-btn:hover {
+    background-color: #8d6e4e;
+}
+
+.schedule {
+    margin-top: 20px;
+}
+
+.appointment-list {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+}
+
+table {
+    width: 75vw;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #c49a6c;
+    color: white;
+}
+
+.edit-btn, .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.edit-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0; 
+    top: 0; 
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px; 
+}
+
+.modal-content {
+    background-color: #c49a6c;
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid #8d6e4e;
+    width: 70%; 
+    font-weight: bold;
+}
+
+.modal-content .btn {
+    background-color: #c49a6c;
+    font-size: 20px;
+}
+
+.modal-content .btn:hover {
+    background-color: #8d6e4e;
+}
+
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+}

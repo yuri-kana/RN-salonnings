@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar">
+            <ul>
+                <hr>
+                <li><a href="dashboard.html" class="highlight">DASHBOARD</a></li>
+                <hr>
+                <li><a href="appointment.html">APPOINTMENT</a></li>
+                <hr>
+                <li><a href="schedules.html">SCHEDULES</a></li>
+                <hr>
+                <li><a href="services.html">SERVICES</a></li>
+                <hr>
+                <li><a href="package.html">PACKAGE</a></li>
+                <hr>
+                <li><a href="reviews.html">REVIEWS</a></li>
+                <hr>
+                <li><a href="../index.html">LOG OUT</a></li>
+                <hr>
+            </ul>
+        </nav>
+        <div class="content">
+            <header>
+                <h1>Welcome to Your Salon Dashboard!</h1>
+                <div class="account-info">
+                    <span>Hello, <span id="username-display">[User's Name]</span></span>
+                    <div class="avatar" onclick="togglePopup()">👤</div>
+                    <button class="notification-btn">Notifications</button>
+                </div>
+            </header>
+            <section class="notification">
+                <h2>Notifications</h2>
+                <h2>Pending Appointments</h2>
+                <table class="ha">
+                    <thead>
+                        <tr>
+                            <th>Customer</th>
+                            <th>Date</th>
+                            <th>Time</th>
+                            <th>Services</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="pendingAppointments"></tbody>
+                </table>
+            </section>
+
+            <div class="charts-row">
+                <div class="chart-container">
+                    <canvas id="appointmentsChart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <canvas id="ratingsChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup" style="display:none;">
+        <div class="popup-content">
+            <h2>Edit Your Information</h2>
+            <input type="text" id="name" placeholder="Username">
+            <input type="text" id="email" placeholder="Email">
+            <input type="password" id="password" placeholder="New Password">
+            <button onclick="saveInfo()">Save</button>
+            <button class="cancel" onclick="togglePopup()">Close</button>
+        </div>
+    </div>    
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
